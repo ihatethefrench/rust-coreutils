@@ -1,4 +1,3 @@
-.SHELL := /usr/local/bin/bash
 debug:
 	cargo build
 release:
