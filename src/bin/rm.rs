@@ -1,4 +1,6 @@
 use std::{fs, path::Path, env, process::exit};
+use lib::poem;
+
 
 fn main() {
     for arg in env::args_os().skip(1) {
@@ -12,7 +14,7 @@ fn main() {
         } else if md.is_dir() {
             fs::remove_dir_all(path);
         } else {
-            println!("oops!")
+            poem();
         }
     }
 }
