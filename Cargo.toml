@@ -1,9 +1,18 @@
 [package]
 name = "coreutils"
 version = "0.1.0"
+authors = ["jnats <jnats@salyut.one>", "crocs <crocs@his-email.com>"]
+description = "simple, portable set of unix coreutils"
 edition = "2018"
+readme = "README.md"
+license = "BSD-3"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[profile.release]
+lto = true
+panic = 'abort'
+opt-level = 'z'
 
 [lib]
 name = "lib"
@@ -13,4 +22,10 @@ path = "src/lib.rs"
 name = "rm"
 path = "src/bin/rm.rs"
 
-[dependencies]
+[[bin]]
+name = "cat"
+path = "src/bin/cat.rs"
+
+[[bin]]
+name = "clear"
+path = "src/bin/clear.rs"
