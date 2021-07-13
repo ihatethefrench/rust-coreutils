@@ -1,4 +1,4 @@
-# coreutils
+# rust-coreutils
 simple, portable set of unix coreutils
 
 ## compilation
