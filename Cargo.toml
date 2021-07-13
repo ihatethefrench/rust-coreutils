@@ -12,7 +12,8 @@ license = "BSD-3"
 [profile.release]
 lto = true
 panic = 'abort'
-opt-level = 'z'
+opt-level = 's'
+codegen-units = 1
 
 [lib]
 name = "lib"
